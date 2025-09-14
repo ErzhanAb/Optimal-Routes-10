@@ -48,8 +48,8 @@ Follow these steps to run the application on your local machine.
 1.  **Clone the repository:**
     ```bash
     git lfs install
-    git clone https://huggingface.co/spaces/ErzhanAb/Optimal-routes
-    cd Optimal-routes
+    git clone https://github.com/ErzhanAb/Optimal-Routes-10.git
+    cd Optimal-Routes-10
     ```
 
 2.  **Create and activate a virtual environment:**
