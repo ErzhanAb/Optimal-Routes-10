@@ -43,16 +43,19 @@ To standardize the inference stage, a reference file `canonical_routes.json` was
 
 Follow these steps to run the application on your local machine.
 
-**Important:** This project uses Git LFS to store large model files. Make sure you have Git LFS installed.
-
 1.  **Clone the repository:**
     ```bash
-    git lfs install
     git clone https://github.com/ErzhanAb/Optimal-Routes-10.git
     cd Optimal-Routes-10
     ```
 
-2.  **Create and activate a virtual environment:**
+2.  **Download the XGBoost Model from Releases:**
+    The XGBoost model file (`xgboost_traffic_model_tuned_no_weather.joblib`) is provided as a release asset.
+    - Go to the **[Releases page](https://github.com/ErzhanAb/Optimal-Routes-10/releases/tag/XGBoost)** of the GitHub repository.
+    - Download the `xgboost_traffic_model_tuned_no_weather.joblib` file from the latest release.
+    - Place the downloaded file into the root directory of the project (the `Optimal-Routes-10` folder you just cloned).
+
+3.  **Create and activate a virtual environment:**
     ```bash
     python -m venv venv
     # Windows
@@ -61,12 +64,12 @@ Follow these steps to run the application on your local machine.
     source venv/bin/activate
     ```
 
-3.  **Install the required dependencies:**
+4.  **Install the required dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Run the application:**
+5.  **Run the application:**
     ```bash
     python app.py
     ```
@@ -74,10 +77,10 @@ Follow these steps to run the application on your local machine.
 
 ## Repository Structure
 
-| File / Directory          | Description                                           |
-| ------------------------- | ----------------------------------------------------- |
-| `app.py`                  | Main Gradio application script                        |
-| `canonical_routes.json`   | Reference file with standard segmented routes         |
-| `catboost_eta_predictor.cbm`| CatBoost model for duration prediction                |
-| `xgboost_traffic_model...`| XGBoost model for traffic prediction                  |
-| `requirements.txt`        | List of dependencies for pip                          |
+| File / Directory                               | Description                                                      |
+| ---------------------------------------------- | ---------------------------------------------------------------- |
+| `app.py`                                       | Main Gradio application script                                   |
+| `canonical_routes.json`                        | Reference file with standard segmented routes                    |
+| `catboost_eta_predictor.cbm`                   | CatBoost model for duration prediction                           |
+| `xgboost_traffic_model_... .joblib`            | XGBoost model for traffic prediction **(Download from Releases)** |
+| `requirements.txt`                             | List of dependencies for pip                                     |
